@@ -61,37 +61,15 @@ var App = React.createClass({
 ```
 To start you can just copy [DefaultTabBar](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/DefaultTabBar.js).
 
-## Changing between tabs
-
-You can change tabs programmatically. Just use `goToPage` method.
-
-```javascript
-var App = React.createClass({
-  render() {
-    return <ScrollableTabView
-      renderTabBar={() => <DefaultTabBar />}
-      ref={(tabView) => { this.tabView = tabView; }}
-    >
-      <Text tabLabel='Tab #1'>My</Text>
-      <Text tabLabel='Tab #2'>favorite</Text>
-      <Text tabLabel='Tab #3'>project</Text>
-      <TouchableOpacity tabLabel='Back' onPress={() => this.tabView.goToPage(0)}>
-        <Text>Lets go back!</Text>
-      </TouchableOpacity>
-    </ScrollableTabView>;
-  },
-});
-```
-
 ## Examples
 
-[SimpleExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/examples/FacebookTabsExample/SimpleExample.js).
+[SimpleExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/SimpleExample.js).
 
-[ScrollableTabsExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/examples/FacebookTabsExample/ScrollableTabsExample.js).
+[ScrollableTabsExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/ScrollableTabsExample.js).
 
-[OverlayExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/examples/FacebookTabsExample/OverlayExample.js).
+[OverlayExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/OverlayExample.js).
 
-[FacebookExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/examples/FacebookTabsExample/FacebookExample.js).
+[FacebookExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/FacebookExample.js).
 
 ## Props
 
