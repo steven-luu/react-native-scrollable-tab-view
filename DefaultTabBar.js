@@ -1,5 +1,6 @@
 const React = require('react');
-const { ViewPropTypes } = ReactNative = require('react-native');
+const ReactNative = require('react-native');
+const { ViewPropTypes } = ReactNative;
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 const {
@@ -41,15 +42,15 @@ const DefaultTabBar = createReactClass({
     const fontWeight = isTabActive ? 'bold' : 'normal';
 
     return <Button
-      style={{flex: 1, }}
+      style={styles.flexOne}
       key={name}
       accessible={true}
       accessibilityLabel={name}
       accessibilityTraits='button'
       onPress={() => onPressHandler(page)}
     >
-      <View style={[styles.tab, this.props.tabStyle, ]}>
-        <Text style={[{color: textColor, fontWeight, }, textStyle, ]}>
+      <View style={[styles.tab, this.props.tabStyle,]}>
+        <Text style={[{ color: textColor, fontWeight, }, textStyle,]}>
           {name}
         </Text>
       </View>
@@ -69,10 +70,10 @@ const DefaultTabBar = createReactClass({
 
     const translateX = this.props.scrollValue.interpolate({
       inputRange: [0, 1],
-      outputRange: [0,  containerWidth / numberOfTabs],
+      outputRange: [0, containerWidth / numberOfTabs],
     });
     return (
-      <View style={[styles.tabs, {backgroundColor: this.props.backgroundColor, }, this.props.style, ]}>
+      <View style={[styles.tabs, { backgroundColor: this.props.backgroundColor, }, this.props.style,]}>
         {this.props.tabs.map((name, page) => {
           const isTabActive = this.props.activeTab === page;
           const renderTab = this.props.renderTab || this.renderTab;
@@ -95,6 +96,9 @@ const DefaultTabBar = createReactClass({
 });
 
 const styles = StyleSheet.create({
+  flexOne: {
+    flex: 1
+  },
   tab: {
     flex: 1,
     alignItems: 'center',
